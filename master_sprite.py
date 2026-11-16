@@ -51,20 +51,20 @@ def grid(text):
 PARTS = {}
 
 PARTS['hammer_head'] = grid("""
-...........KK..
-.........KKhgK.
-.......KKhKssK.
-.....KKhhsKsssK
-...KKhhssssKsdK
-.KKhKssssddKKK.
-KhhsKssddKK....
-KhssKsddKK.....
-.KssdKdKK......
-.KdddKK........
-..KKK..........
+............KK..
+..........KKhgK.
+........KKhKssdK
+......KKhhsKssdK
+....KKhhssssKsdK
+..KKhKssssdddKK.
+KKhhsKsssddKK...
+KhhssKsddKK.....
+KhsssdKKK.......
+.KsddKK.........
+.KKKK...........
 """)
 
-PARTS['hammer_shaft'] = grid("""
+PARTS['shaft_upper'] = grid("""
 KhsK........
 KhsK........
 .KhsK.......
@@ -83,174 +83,157 @@ KhsK........
 .......KhsK.
 ........KhsK
 ........KhsK
+""")
+
+PARTS['shaft_lower'] = grid("""
+KhsK......
+KhsK......
+.KhsK.....
+.KhsK.....
+..KhsK....
+..KhsK....
+...KhsK...
+...KhsK...
+....KhsK..
+....KhsK..
+.....KhsK.
+.....KhsK.
+....KKhsKK
+....KgssdK
+.....KKKK.
 """)
 
 PARTS['far_arm'] = grid("""
-.KKKKK..........
-.KddddK.........
-.KddddK.........
-.KsdddK.........
-..KdddK...KKKK..
-..KsddKKKKssssK.
-..KKKKssssKsssdK
-..KddKsdddKssddK
-..KdddKKKKKsdddK
-...KKdddddKddddK
-.....KKKKKKKKKK.
-""")
-
-PARTS['far_blade_main'] = grid("""
-..........KK
-.........KgK
-........KhsK
-.......KhsdK
-......KhsddK
-......KsddK.
-.....KssddK.
-....KssdddK.
-....KssddK..
-...KsssddK..
-..KsssdddK..
-..KssdddK...
-.KsssdddK...
-.KssddddK...
-.KKKKKKK....
-""")
-
-PARTS['far_blade_low'] = grid("""
-........K
-......KKK
-....KKgK.
-..KKshK..
-.KsssdK..
-KsssdKK..
-KdddKK...
-KKKK.....
-""")
-
-PARTS['far_dome'] = grid("""
-..KKKKKKK...
-.KssssdddK..
-KsssddddddK.
-KsdddddddddK
-KRRRRRRrrrKK
-KKKKKKKKKKdK
-.KssdddddK..
-..KKdddKK...
-....KKKK....
+KKKKKK...........
+KddddK.....KKKK..
+KdsddK....KsshsK.
+KdsdddK..KsssssdK
+.KdsddK..KssssddK
+.KddddK.KKsKsKddK
+.KdsdddKsdKdKdKK.
+..KdddKssddKKK...
+..KddKsssddK.....
+..KKKssdddK......
+..KsssdddKK......
+..KKdddKKK.......
+....KKKK.........
 """)
 
 PARTS['far_thigh'] = grid("""
-KKKKKKKKKK..
-KdssssdddK..
-KdsssddddK..
-KddddddddK..
-.KdddddddK..
-.KddddddddK.
-.KddddddddK.
-.KKKKddddKK.
-.KdsdKKKKdK.
-..KsssddddK.
-..KdsddddddK
-..KddddddddK
-..KKdddddddK
-...KKKKKKKKK
-...KsssddddK
-...KdsdddddK
-...KKdddKKK.
-.....KKKK...
+.KKKKKKKKK...
+.KdssssddK...
+.KdsssdddK...
+.KddsddddK...
+..KdsssdddK..
+..KddsddddK..
+..KKKKddddK..
+..KdssKKKdK..
+...KdsssdKKK.
+...KddssdddK.
+...KdddsdddK.
+...KdddddddK.
+....KdddddddK
+....KdddddddK
+....KdddddddK
+....KKdddddKK
 """)
 
 PARTS['far_shin'] = grid("""
-KKKKKKKKK.....
-KsssddddK.....
-KdsdddddKKK...
-KdddddddKsgK..
-KddddddKKKK...
-KKKKKKKKK.....
-.KssddddK.....
-.KdsddddK.....
-.KddddddK.....
-.KddddddK.....
-.KKKKKKKKK....
-.KssdddddK....
-.KdsdddddKKK..
-.KddddddddssKK
-.KdddddddddddK
-.KKKKKKKKKKKKK
+..KKKKKKK.......
+.KssshsddK......
+.KsssddddKK.....
+.KsddddddKgK....
+.KdddddddKKK....
+..KKKKKdddK.....
+..KssdKdddK.....
+..KdssdddK......
+..KdsddddK......
+..KddddddK......
+..KddddddK......
+..KddddddK......
+..KKKKdddK......
+..KsshKdddK.....
+..KsssdddddKK...
+..KsdddddddssKK.
+..KddddddddddddK
+..KKKKKKKKKKKKKK
+""")
+
+PARTS['gorget'] = grid("""
+.KKKKKK.
+KsshsddK
+KssssddK
+KKsdddKK
 """)
 
 PARTS['chest'] = grid("""
-....KKKKKKKKKKK....
-..KKdssssdddddKKK..
-.KsshssdKKKdddddKK.
-KsshhssssdKdssdddK.
-KshhsssssdKdsssddKK
-KRRssssssdKdssssRRK
-KKKRRssssdKdssRRKKK
-KsdKKRRssdKdRRKKddK
-KssddKKRRdKRRKdsddK
+.......KKKKKKKK....
+...KKKKssssddddKKK.
+.KKshsKKsssdddKKsdK
+KsshhssKKssddKKssdK
+KshhssssKKKKKKsssdK
+KsshsssssdKssssdddK
+KRRssssssdKssssdddK
+KKKRRssssdKsssddRRK
+KsdKKRRssdKssdRRKKK
+KssddKKRRdKsRRKKddK
 KsssdddKKRRRKKdsddK
-KRRsssddKKKKKdssRRK
-.KKRRssssdKdssRRKK.
-.KdKKRRssdKdRRKKdK.
-.KsddKKRRdKRRKdddK.
-..KsddKKKRRRKKddK..
-..KKsdddKKKKKdddKK.
+.KssssddKKKKKdssdK.
+.KRRsssssdKsssdRRK.
+..KKRRsssdKssRRKK..
+..KsKKRRsdKRRKKdK..
+...KsdKKRRRKKddK...
+...KssdddKKdddK....
 """)
 
 PARTS['abdomen'] = grid("""
-KsshsssdddddddK
-KKKKKKKKKKKKKKK
-.KshsssddddddK.
+.KsshssddddddK.
 .KKKKKKKKKKKKK.
-""")
-
-PARTS['belt'] = grid("""
-KKKKKKKKKKKKKKKKK
-KshhsssssdddddddK
-KKKKKKKKKKKKKKKKK
+.KshsssddddddK.
+KKKKKKKKKKKKKKK
+KshhsssssdddddK
+KKKKKKKKKKKKKKK
 """)
 
 PARTS['near_thigh'] = grid("""
-.....KKKKKKKK
-.....KshhsddK
+....KKKKKKKKK
+....KshhsdddK
 ....KsshsdddK
-....KssssdddK
-....KsssdddK.
+...KsshssdddK
+...KsshsdddK.
 ...KssssdddK.
 ...KsssddddK.
-...KssddddKK.
-..KKKKdddKK..
+..KKKKsddddK.
 ..KshhKKKdK..
-.KsshssdddK..
-.KsssdddddK..
+..KsshssKKK..
+..KssssdddK..
+.KsssssdddK..
+.KssssdddK...
+.KsssddddK...
 .KssdddddK...
-KKsddddddK...
-KKKKKKKKKK...
-KshhssdddK...
-KsssssddKK...
-.KKsdddKK....
-...KKKK......
+.KKdddddKK...
 """)
 
 PARTS['near_shin'] = grid("""
-.........KKKKKKKK
-......K..KshhsddK
-.....KgKKKsssdddK
-.....KhsKKsddddK.
-......KKKKKddddK.
 .........KKKKKKK.
-........KshhsddK.
+........KsshhsdK.
+...K....KssssddKK
+..KgK..KsssssdddK
+..KhsKKKssssddddK
+...KKsdKKsdddddK.
+.....KKKKKKKdddK.
+........KshsKddK.
+........KsshsddK.
+........KssssddK.
 ........KsssdddK.
-.......KssssdddK.
+.......KssssddK..
 .......KsssdddK..
-.......KKKKKKKK..
-......KsshssddK..
-....KKKsssddddK..
-..KKshssddddddK..
-KKsssdddddddddK..
-KKKKKKKKKKKKKK...
+.......KKKKsddK..
+......KsshsKddK..
+....KKsssssdddK..
+..KKshssssddddK..
+.KsssssdddddddK..
+.KKKKKKKKKKKKKK..
 """)
 
 PARTS['tasset'] = grid("""
@@ -277,64 +260,68 @@ PARTS['head'] = grid("""
 ........K..K...
 .......KHKKHK..
 .....KKKnKKnKK.
-...KKKddKKKKKKK
-..KKddKKKllllmK
-..KdKKKllllmmmK
-..KKKKllKKKlKKK
-.KKKKKlRWWKlWKK
-KllKKlRRRRlRRmK
-.KlmKllRRllRmuK
-..KKKlllmmumuK.
-....KllmmmmmuK.
-....KlmuuuumK..
-.....KlmmmmuK..
-.....KKmmuuK...
-.......KKKK....
+...KKdsdKKKKlmK
+..KdsdKKKKllllK
+..KsdKKKlllllmK
+.KKdKKKlKKKKlKK
+KKKKKKlRRWKlRWK
+KllKKlmRRRRmRRK
+.KlmKKlmRRmmuRK
+..KKKKlmmmmumuK
+.....KlmmmmmuK.
+.....KmmuuuuuK.
+......KmmmmmuK.
+......KKmmuuK..
+........KKKK...
 """)
 
 PARTS['near_arm'] = grid("""
-.KKKKKKKK.
-.KshhsddK.
-.KsssdddK.
-.KssddddK.
-KKsdddddK.
-KsKKKKKKK.
-KshhsdddK.
-KsssddddK.
-KKKKKKKKK.
+.......KKKKKKK
+.......KsshsdK
+......KsshsddK
+......KsssdddK
+.....KsshsddK.
+.....KsssdddK.
+....KsshsddK..
+....KsssdddK..
+...KsshsdddK..
+...KsssddddK..
+..KKsssdddKK..
+..KKKKKKKKK...
 """)
 
 PARTS['near_forearm'] = grid("""
-....KKKKKKK.
-.KKKKshhsdK.
-KgsKsssdddK.
-.KKKsdddddK.
-...KKKKKKKK.
-...KshhsddK.
-...KsssdddK.
-..KssssdddK.
-..KsssddddK.
-..KssdddddK.
-..KKKKKKKKK.
-..KshhsddK..
-.KssssdddK..
-.KsKsKsKdK..
-.KhKsKsKK...
-..K.K.K.....
+...KKKKKK....
+.KKKshhsdK...
+KgsKsssddK...
+.KKKssdddK...
+...KKKKdddK..
+....KshKddK..
+....KsshsdK..
+.....KsssddK.
+.....KsshsdK.
+......KsssddK
+......KssdddK
+......KKKKddK
+......KshsKdK
+.....KsssdddK
+.....KsKsKdKK
+.....KhKsKdK.
+......K.K.K..
 """)
 
-PARTS['near_dome'] = grid("""
-....KKKKKKK....
-..KKsshhsssKK..
-.KsshhsssssddK.
-KsshhsssssdddK.
-KshhsssssddddKK
-KsssssssdddddKK
-KKRRRRRRRRrrKK.
-KsKKKKKKKKKKdK.
-KsshssssddddK..
-.KKssssdddKK...
-...KKKKKKK.....
+PARTS['near_cap'] = grid("""
+.....KKKKKKK....
+...KKsshhsssKK..
+..KsshhsssssddK.
+.KsshssssssdddK.
+KsshsssssssddddK
+KssssssssdddddKK
+KKssssddddddKKK.
+.KKKKKKKKKKKK...
+.KRRRRRRRRrK....
+.KKsssdddKK.....
+...KKKKKK.......
 """)
 
 PARTS['near_blade_main'] = grid("""
@@ -353,8 +340,7 @@ KhhK.........
 ....KhsssddK.
 ....KhssssddK
 .....KhsssddK
-.....KKhssddK
-.......KKKKKK
+.....KhhsssdK
 """)
 
 PARTS['near_blade_low'] = grid("""
@@ -364,9 +350,9 @@ KKK........
 .KhhsKK....
 ..KhsssKK..
 ..KKhssssK.
-....KKsssdK
-......KKddK
-........KKK
+....KKssssd
+......KKsss
+........KKs
 """)
 
 PARTS['near_blade_inner'] = grid("""
@@ -379,33 +365,75 @@ KhsK....
 ..KhsdK.
 ..KhssdK
 ..KhssdK
-..KKKKKK
+..KhsssK
+""")
+
+PARTS['far_cap'] = grid("""
+...KKKKKK....
+.KKssssddKK..
+KsssdddddddK.
+KssddddddddK.
+KsdddddddddKK
+KKddddddddKK.
+.KKKKKKKKKK..
+..KRRRRrrK...
+..KKKKKKK....
+""")
+
+PARTS['far_blade_main'] = grid("""
+..........KK
+.........KgK
+........KhsK
+.......KhsdK
+......KhsddK
+......KsddK.
+.....KssddK.
+....KssdddK.
+....KssddK..
+...KsssddK..
+..KsssdddK..
+..KssdddK...
+.KsssdddK...
+.KssddddK...
+.KsdddddK...
+""")
+
+PARTS['far_blade_low'] = grid("""
+........K
+......KKK
+....KKgK.
+..KKshK..
+.KsssdK..
+sssddKK..
+sddKK....
+dKK......
 """)
 
 # ------------------------------------------------------------------- pose --
 # Back-to-front draw order: (part, x, y) of the part's top-left pixel.
 IDLE = [
-    ('hammer_shaft', 68, 39),
-    ('hammer_head', 60, 31),
-    ('far_arm', 92, 68),
-    ('far_thigh', 83, 85),
-    ('far_shin', 87, 103),
-    ('chest', 75, 63),
-    ('abdomen', 76, 79),
-    ('belt', 75, 83),
-    ('near_thigh', 69, 85),
-    ('near_shin', 60, 104),
-    ('tasset', 79, 85),
-    ('far_blade_low', 99, 58),
-    ('far_blade_main', 94, 47),
-    ('far_dome', 90, 60),
-    ('head', 80, 46),
-    ('near_arm', 67, 68),
-    ('near_forearm', 63, 76),
-    ('near_blade_inner', 67, 49),
-    ('near_blade_low', 54, 56),
-    ('near_blade_main', 57, 43),
-    ('near_dome', 63, 58),
+    ('shaft_upper', 65, 38),
+    ('shaft_lower', 86, 80),
+    ('hammer_head', 57, 30),
+    ('far_arm', 88, 67),
+    ('far_thigh', 80, 86),
+    ('far_shin', 83, 101),
+    ('chest', 72, 64),
+    ('abdomen', 74, 81),
+    ('near_thigh', 69, 86),
+    ('near_shin', 61, 101),
+    ('tasset', 76, 86),
+    ('gorget', 79, 61),
+    ('far_cap', 87, 59),
+    ('far_blade_low', 96, 57),
+    ('far_blade_main', 90, 46),
+    ('head', 76, 46),
+    ('near_arm', 59, 68),
+    ('near_forearm', 58, 77),
+    ('near_cap', 60, 59),
+    ('near_blade_inner', 66, 49),
+    ('near_blade_low', 52, 57),
+    ('near_blade_main', 56, 44),
 ]
 
 

@@ -55,11 +55,11 @@ Black armour is a near-black base with a small, cool highlight. Mid-grey steel w
 
 Guts was chosen as the closest reference, so the master sprite follows its scale and its armour rendering.
 
-- 72 px to the top of the hair (Guts: 72), horn tips at 74 px, pauldron blades to 77 px, hammer head to 89 px
+- 72 px to the top of the hair (Guts: 72), horn tips at 74 px, pauldron blades to 76 px, hammer head to 90 px
 - Head 14 px tall and 13 px wide, face 9 px wide
-- Chest 19 px, waist 15 px, thighs 10 px, shins 8 px, boots 12-14 px long
-- Feet 41 px apart, back foot 1 px higher
-- Armour tone shares: black 45%, shadow 27%, base 21%, highlight 6% (Guts: 51 / 25 / 17 / 7)
+- Chest 19 px, waist 13 px, thighs 9 px, shins 8 px, boots 13-14 px long
+- Feet 37 px apart, back foot 1 px higher
+- Armour tone shares: black 42%, shadow 26%, base 26%, highlight 7% (Guts: 51 / 25 / 17 / 7)
 - Fixed canvas 160x128, foot row y = 119, axis x = 80 at the centre of the feet
 - 15 colours + transparent
 
