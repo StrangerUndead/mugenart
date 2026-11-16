@@ -53,12 +53,15 @@ Black armour is a near-black base with a small, cool highlight. Mid-grey steel w
 
 ## Targets for this character
 
-- 61 px to the top of the head, horns 2 px above that; pauldron spikes to about 66 px, hammer head to about 71 px
-- Head 12 px tall, 12-13 px wide; face skin 6-7 px wide
-- Shoulders 23 px before pauldrons, waist 13 px, arms 7 px, fists 6x6, thighs 8 px, calves 7 px, boots 10x4
-- Feet 24 px apart, back foot 1 px higher
-- Fixed canvas 128x96, foot row fixed, axis at the centre of the feet
-- 15 colours + transparent (the original DS limit; stricter than the fan sheets, so it fits both)
+Guts was chosen as the closest reference, so the master sprite follows its scale and its armour rendering.
+
+- 72 px to the top of the hair (Guts: 72), horn tips at 74 px, pauldron blades to 77 px, hammer head to 89 px
+- Head 14 px tall and 13 px wide, face 9 px wide
+- Chest 19 px, waist 15 px, thighs 10 px, shins 8 px, boots 12-14 px long
+- Feet 41 px apart, back foot 1 px higher
+- Armour tone shares: black 45%, shadow 27%, base 21%, highlight 6% (Guts: 51 / 25 / 17 / 7)
+- Fixed canvas 160x128, foot row y = 119, axis x = 80 at the centre of the feet
+- 15 colours + transparent
 
 ## Draft palette
 
